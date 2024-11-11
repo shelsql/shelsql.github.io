@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!--
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!--
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!--
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!--
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  -->
+  
+
+
+  <title>Denoising Diffusion for Pixel Tracking</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Denoising Diffusion for Pixel Tracking</h1>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Sheldon Liang, Peking University<br>Advised by Dr. Adam Harley, Prof. Leonidas Guibas</span>
+                  </div>
+
+                  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.gif" style="width:100%;"/>
+      <h2 class="subtitle has-text-centered">
+        We present a novel approach to pixel tracking leveraging diffusion models. Our method tracks target pixels in video sequences in a probabilistic manner.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The state-of-the-art for pixel tracking, both in optical flow and in multi-frame motion estimation, is driven by algorithms which learn an iterative refinement procedure, where the model begins with a noisy estimate of the target's trajectory, and the model iteratively updates this estimate with deltas, until the estimated trajectory matches the ground truth. Parallel to this, research in generative models has developed denoising diffusion procedures, where a generated sample is initialized with random noise, and the model iteratively updates this sample by applying deltas, until the sample matches a real data point. In this project we first of all make this connection across areas concrete. Second, we aim to leverage the recent progress in scaling up denoising generative models to implement (and scale up) a denoising-based pixel tracker. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">Method</h2>
+       <div class="level-set has-text-justified">
+        <!-- Your image here -->
+        <img src="static/images/method.png" alt="Method"/>
+        <h2>
+          
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="column is-centered has-text-centered">
+      <h2 class="title is-3">Visualizations</h2>
+      <img src="static/images/track_goat.gif" style="width:50%;"/>
+      <h2 class="subtitle has-text-centered" style="font-size: 12pt;">
+          Visualization of tracking results on BADJA dataset: blue points indicate ground truth points and pink points are predicted trajectories.
+      </h2>
+      <img src="static/images/sample.gif" style="width:100%;"/>
+      <h2 class="subtitle has-text-centered" style="font-size: 12pt;">
+          Visualization of diffusion sampling process on video clips: blue-green trajectories indicate ground truth trajectories and pink-yellow trajectories are sampled trajectories.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
