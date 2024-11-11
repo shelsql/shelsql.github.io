@@ -114,9 +114,9 @@
         <h2 class="title is-3">Method</h2>
        <div class="level-set has-text-justified">
         <!-- Your image here -->
-        <img src="static/images/method.png" alt="MY ALT TEXT"/>
+        <img src="static/images/method.png" alt="Method"/>
         <h2>
-          Given the 3D model of the end-effector and a target image, we first render templates from various viewpoints. Using foundation features, we find the top Kr references most similar to the target image and compute 2D-3D matches and pose candidates. To address ambiguities from partial observations, we introduce a global memory pool that records key frames and robot states for pose optimization. To resolve ambiguities from symmetry, we propose a symmetry disambiguation module to eliminate incorrect matches.
+          Given a textured 3D model of an end-effector, we first render RGB-D templates from multiple viewpoints offline. We then extract foundation features and retrieve the top K similar references everytime we process a target image, and compute 2D-3D matches between the target and the templates to obtain pose candidates. To address ambiguities from occlusions, we introduce a global memory pool that records key frames and robot states for pose optimization. To resolve ambiguities from symmetry, we propose a symmetry disambiguation module to eliminate incorrect matches.
         </h2>
       </div>
     </div>
@@ -126,6 +126,26 @@
 </section>
 <!-- End image carousel -->
 
+
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="column is-centered has-text-centered">
+      <h2 class="title is-3">Results</h2>
+      <img src="static/images/synthetic-data.gif" style="width:100%;"/>
+      <h2 class="subtitle has-text-centered" style="font-size: 12pt;">
+          Synthetic data samples and model prediction results: green bounding box indicates ground truth pose, red bounding box indicates predicted pose.
+      </h2>
+      <video src="static/videos/targeting.mp4" style="display: block; margin: auto; width:70%;" controls>
+        Your browser does not support the video tag.
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 12pt;">
+          High precision targeting with the proposed method: our method achieves errors within 1mm with calibration using 15 frames.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
